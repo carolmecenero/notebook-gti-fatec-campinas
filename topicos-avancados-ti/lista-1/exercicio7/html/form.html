@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Média Notas</h1>
+        </div>
+        <form id="form" method="POST" action="/">
+            <h4>Informe as notas</h4>
+            <div class="form-group">
+                Nota 1: <input type="text" name="valorNota1" class="form-control" value="{{valorNota1}}" />
+            </div>
+            <div class="form-group">
+                Nota 2: <input type="text" name="valorNota2" class="form-control" value="{{valorNota2}}" />
+            </div>
+            <input type="submit" value="Calcular" class="btn btn-primary" />
+        </form>
+        </br>
+        <form id="form-resultado">
+            <h4>Resultado</h4>
+            <div class="form-group">
+                <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                        Média: <input type="text" value="{{valorMedia}}" class="form-control" readonly/>
+                    </div>
+                    <div class="col">
+                        Status: <input type="text" value="{{status}}" class="form-control" readonly/>
+                    </div>
+                    <div class="col" style="padding-top:20px">
+                        <img src="{{statusImg}}" style="width:10%">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

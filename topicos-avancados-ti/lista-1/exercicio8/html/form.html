@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Cálculo de apólice</h1>
+        </div>
+        <form id="form" method="POST" action="/">
+            <h4>Preencha os campos a seguir</h4>
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col">
+                    <div class="form-group">
+                        Nome: <input type="text" name="valorNome" class="form-control" value="{{valorNome}}" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Sexo: <input type="text" name="valorSexo" class="form-control" value="{{valorSexo}}" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Ano de Nascimento: <input type="number" min='1901' max='2001' name="valorAnoNascimento" class="form-control" value="{{valorAnoNascimento}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col">
+                    <div class="form-group">
+                        Marca: <input type="text" name="valorMarca" class="form-control" value="{{valorMarca}}" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Modelo: <input type="text" name="valorModelo" class="form-control" value="{{valorModelo}}" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Ano de Fabricação: <input type="number" min="1800" max="2022" step="1" name="valorAnoFabricacao" class="form-control" value="{{valorAnoFabricacao}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col">
+                    <div class="form-group">
+                        Valor do Veículo: <input type="number" min="0" name="valorVeiculo" class="form-control" value="{{valorVeiculo}}" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Bônus(%) <input type="number" min="0" max="25" step="1" name="valorBonus" class="form-control" value="{{valorBonus}}" />
+                    </div>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <input type="submit" value="Calcular" class="btn btn-primary" />
+        </form>
+        </br>
+        <form id="form-resultado">
+            <h4>Resultado</h4>
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col">
+                    <div class="form-group">
+                        Valor apólice: <input type="text" value="{{valorApolice}}" class="form-control" readonly/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Critério A (%): <input type="text" value="{{valorCriterioA}}" class="form-control" readonly/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Critério B (%): <input type="text" value="{{valorCriterioB}}" class="form-control" readonly/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        Critério C (%): <input type="text" value="{{valorCriterioC}}" class="form-control" readonly/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
